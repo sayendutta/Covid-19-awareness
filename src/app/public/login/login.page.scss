@@ -1,0 +1,48 @@
+page-home{
+    #contain{
+        width: 200px;
+        height: 100px;
+    }
+}
+ion-content{
+    --background: #fff url('https://media.npr.org/assets/img/2014/06/15/51140413-7b24e23c1293d6cb8f4459c236b132d17c041e0e-s1200.jpg') no-repeat center center / cover;
+}
+ion-card{
+    --background:rgba(255,255,255,0.7);
+}
+ion-label{
+    color: #000000 !important;
+}
+    ion-item{
+        --background: none;
+    }
+    p{
+        color: #ffffff !important;
+        text-align: center;
+    }
+    .icon{
+        margin-left: 80% !important;
+        position: absolute;
+    }
+    .call{
+        margin-left: 0% !important;
+    }
+    .btn{
+        width: 200px !important;
+    }
+    .bt{
+        color: #4c00ff !important;
+      
+    }
+    .s{
+        color: #4c00ff !important;
+    }
+    ion-footer{
+        height: 50px !important;
+    }
+    ion-header{
+        height: 30px !important;
+    }
+    .b{
+        height: 50px !important;
+    }

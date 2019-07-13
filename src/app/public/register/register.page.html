@@ -1,0 +1,43 @@
+ 
+<ion-content padding >
+  <ion-card>
+    <ion-card-header color="primary"><p>MealKing</p></ion-card-header>
+      <ion-item>
+          <ion-label position="floating">Name</ion-label>
+          <ion-input type="text"></ion-input>
+      </ion-item>
+        <ion-item>
+            <ion-label position="floating">Phone</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Address</ion-label>
+          <ion-input type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email"></ion-input>
+    </ion-item>
+    <ion-list>
+      <ion-item>
+        <ion-label>Mode of payment</ion-label>
+        <ion-select>
+          <ion-select-option value="cash">Cash</ion-select-option>
+          <ion-select-option value="card">Card</ion-select-option>
+        </ion-select>
+      </ion-item>
+    
+    </ion-list>
+    <ion-item>
+      <ion-label position="floating">Choose pick up date and time</ion-label>
+      <ion-datetime displayFormat="DD-MM-YYYY HH:mm" [(ngModel)]="today"></ion-datetime>
+    </ion-item>
+            <br>
+            <br>
+              <ion-button expand="block">Register here</ion-button>
+  </ion-card>
+  
+</ion-content>
+<ion-footer>
+        <ion-button class="ba" expand="full" routerLink="/login">Already have an account?Sign in</ion-button>
+</ion-footer>

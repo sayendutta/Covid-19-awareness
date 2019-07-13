@@ -1,0 +1,30 @@
+
+ion-item{
+        --background: none;
+}
+ion-label{
+    color: #000000 !important;
+}
+p{
+    color: #ffffff !important;
+    text-align: center;
+    font-size: 15px;
+}
+ion-card{
+    --background: rgba(255,255,255,0.7);
+}
+ion-list{
+    --background: none;
+}
+ion-radio-group{
+    --background: none;
+}
+ion-content{
+    --background:  #fff url('https://barbtaub.files.wordpress.com/2015/01/img_0006.jpg') no-repeat center center / cover;
+}
+.ba{
+    height: 50px !important;
+}
+ion-footer{
+    height: 50px !important;
+}
