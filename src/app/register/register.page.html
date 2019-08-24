@@ -4,40 +4,32 @@
     <ion-card-header color="primary"><p>MealKing</p></ion-card-header>
       <ion-item>
           <ion-label position="floating">Name</ion-label>
-          <ion-input type="text"></ion-input>
+          <ion-input type="text" [(ngModel)]="data.customer_name"></ion-input>
       </ion-item>
         <ion-item>
             <ion-label position="floating">Phone</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="tel" [(ngModel)]="data.phone_no"></ion-input>
         </ion-item>
-        <ion-item>
-          <ion-label position="floating">Address</ion-label>
-          <ion-input type="text"></ion-input>
-      </ion-item>
       <ion-item>
-        <ion-label position="floating">Email</ion-label>
-        <ion-input type="email"></ion-input>
+        <ion-label position="floating">Email Id (Optional)</ion-label>
+        <ion-input type="email" [(ngModel)]="data.email"></ion-input>
     </ion-item>
-    <ion-list>
-      <ion-item>
-        <ion-label>Mode of payment</ion-label>
-        <ion-select>
-          <ion-select-option value="cash">Cash</ion-select-option>
-          <ion-select-option value="card">Card</ion-select-option>
-        </ion-select>
-      </ion-item>
-    
-    </ion-list>
     <ion-item>
-      <ion-label position="floating">Choose pick up date and time</ion-label>
-      <ion-datetime displayFormat="DD-MM-YYYY HH:mm" [(ngModel)]="today"></ion-datetime>
-    </ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="data.customer_password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Confirm Password</ion-label>
+    <ion-input type="password" [(ngModel)]="data.confirmpassword"></ion-input>
+</ion-item>
             <br>
             <br>
-              <ion-button expand="block">Register here</ion-button>
+              <ion-button expand="block" (click)=submitReg() [disabled]="data.phone_no==''  ||  data.customer_password=='' || data.customer_name=='' || data.confirmpassword==''">Register here</ion-button>
   </ion-card>
   
 </ion-content>
-<ion-footer>
-        <ion-button class="ba" expand="full" routerLink="/login">Already have an account?Sign in</ion-button>
+<ion-footer (click)=pushLogin()>
+  <ion-toolbar>
+    <ion-title style='font-size:14px !important;text-align:center'>Already have an account? Login</ion-title>
+  </ion-toolbar>
 </ion-footer>

@@ -1,9 +1,46 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      Transaction History     <ion-button  style='position:absolute;right:10px;top:-12px;font-size:12px'>Refresh Data</ion-button>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+          <ion-row>
+       
+              <ion-col>   Date</ion-col>    
+              <ion-col>   Total</ion-col>
+              <ion-col>   Payment</ion-col>
+            </ion-row>
+      <ng-container>
+        
+   <ion-row>
+
+         <ion-col>    <ion-item>   </ion-item></ion-col>    
+         <ion-col>   <ion-item>&#8377; </ion-item></ion-col>    
+         <ion-col>   <ion-item>  </ion-item></ion-col>
+       </ion-row>
+    
+      </ng-container>
+    
+    </ion-grid>
+    <div >
+        <div class="ion-padding custom-skeleton">
+          <ion-grid>
+            <ion-row >
+
+                <ion-col>    <ion-item> <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text>  </ion-item></ion-col>    
+                <ion-col>   <ion-item> <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text></ion-item></ion-col>    
+                <ion-col>   <ion-item> <ion-skeleton-text animated style="width: 100%"></ion-skeleton-text></ion-item></ion-col>
+              </ion-row>
+            </ion-grid>
+    
+        </div>
+        </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

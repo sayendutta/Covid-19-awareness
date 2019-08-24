@@ -14,7 +14,13 @@ const routes: Routes = [
   { path: 'forgotpassword', loadChildren: './forgotpassword/forgotpassword.module#ForgotpasswordPageModule' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
-  { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' }
+  { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
+  { path: 'cart', loadChildren: './cart/cart.module#CartPageModule' },
+  { path: 'order-details', loadChildren: './order-details/order-details.module#OrderDetailsPageModule' },
+  { path: 'order', loadChildren: './order/order.module#OrderPageModule' },
+  { path: 'payment', loadChildren: './payment/payment.module#PaymentPageModule' },
+  { path: 'otp', loadChildren: './otp/otp.module#OtpPageModule' },
+  { path: 'delivery', loadChildren: './delivery/delivery.module#DeliveryPageModule' }
 ];
  
 @NgModule({

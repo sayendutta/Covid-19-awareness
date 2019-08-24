@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button defaultHref="/tabs" text="cart"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ng-container *ngFor="let data of list">
+      <ion-list>
+          <h4>Amul Dairy Milk</h4>
+          <ion-card>500ml</ion-card>
+          <p>&#8377;20</p>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-icon class="decreament"  src="assets/minus.svg"  (click)="decrease()"></ion-icon>
+              </ion-col>
+              <ion-col>
+                <p class="quantity">{{data.count}}</p>
+              </ion-col>
+              <ion-col>
+                <ion-icon  class="increament" src="assets/plus.svg" id="id0" (click)="increase()"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-list>
+        <ion-list>
+          <h4>Mother Dairy Milk</h4>
+          <ion-card>500ml</ion-card>
+          <p>&#8377;20</p>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-icon class="decreament" id="id1"  src="assets/minus.svg" (click)="decrease()"></ion-icon>
+              </ion-col>
+              <ion-col>
+                <p class="quantity" id="id1">{{data.count}}</p>
+              </ion-col>
+              <ion-col>
+                <ion-icon  class="increament" src="assets/plus.svg" id="id1" (click)="increase()"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-list>
+        <ion-list>
+          <h4>Haringhata Dairy Milk</h4>
+          <ion-card>500ml</ion-card>
+          <p>&#8377;20</p>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-icon class="decreament"  src="assets/minus.svg" id="id2" (click)="decrease(this.id)"></ion-icon>
+              </ion-col>
+              <ion-col>
+                <p class="quantity" id="id2">{{data.count}}</p>
+              </ion-col>
+              <ion-col>
+                <ion-icon  class="increament" src="assets/plus.svg" id="id2" (click)="increase(this.id)"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-list>
+        <ion-list>
+            <h4>Red Cow Dairy Milk</h4>
+            <ion-card>500ml</ion-card>
+            <p>&#8377;20</p>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-icon class="decreament"  src="assets/minus.svg" (click)="decrease()"></ion-icon>
+                </ion-col>
+                <ion-col>
+                  <p class="quantity">{{data.count}}</p>
+                </ion-col>
+                <ion-col>
+                  <ion-icon  class="increament" src="assets/plus.svg" (click)="increase()"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-list>
+          <ion-list>
+              <h4>Amulia Dairy Milk</h4>
+              <ion-card>500ml</ion-card>
+              <p>&#8377;20</p>
+              <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    <ion-icon class="decreament"  src="assets/minus.svg" (click)="decrease()"></ion-icon>
+                  </ion-col>
+                  <ion-col>
+                    <p class="quantity">{{data.count}}</p>
+                  </ion-col>
+                  <ion-col>
+                    <ion-icon  class="increament" src="assets/plus.svg" (click)="increase()"></ion-icon>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-list>
+  
+  </ng-container>
+    
+</ion-content>
