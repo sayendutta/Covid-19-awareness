@@ -5,45 +5,45 @@
 </ion-header>
 
 <ion-content>
-
+<ng-container *ngFor="let data of data">
     <ion-card >
         <ion-card-content>
             <ion-item >
                 <ion-label>Order No</ion-label>
-                <p>#id</p>
+                <p>#{{data.id}}</p>
               </ion-item>
             <ion-item >
                 <ion-label>Date</ion-label>
-                <p>date</p>
+                <p>{{data.date}}</p>
               </ion-item>
             <ion-item >
                 <ion-label>Phone</ion-label>
-                <p>phone</p>
+                <p>{{data.phone}}</p>
               </ion-item>
               <ion-item>
                   <ion-label>Total</ion-label>
-                  <p>&#8377;</p>
+                  <p>&#8377; {{data.total}}</p>
                 </ion-item>
                 <ion-item>
                   <ion-label>Location</ion-label>
-                  <p>location</p>
+                  <p>{{data.location}}</p>
                 </ion-item>
                 <ion-item>
                   <ion-label>Address</ion-label>
-                  <p> address</p>
+                  <p> {{data.address}}</p>
                 </ion-item>
                 <ion-item>
                   <ion-label>Pincode</ion-label>
-                  <p>pincode</p>
+                  <p>{{data.pincode}}</p>
                 </ion-item>
         </ion-card-content>
     </ion-card>
   <ion-card >
     <ion-card-content>
-     <ng-container>
-      <ion-item >
-      <ion-label>product</ion-label>
-      <p>Quantity : </p>
+     <ng-container *ngFor="let datas of data.list">
+      <ion-item *ngIf="datas.quantity>0">
+      <ion-label>{{datas.product}}</ion-label>
+      <p>Quantity : {{datas.quantity}}</p>
     </ion-item>
   </ng-container>
     </ion-card-content>
@@ -51,7 +51,12 @@
   </ion-card>
 <ion-card>
   <ion-card-content>
+    <ion-item *ngIf="phone==7980588507"> 
+        <ion-label>Delivered</ion-label>
+        <ion-checkbox></ion-checkbox>
+    </ion-item>
 <p>For any queries or information regarding this order, contact : +919007688507</p>
   </ion-card-content>
 </ion-card>
+</ng-container>
 </ion-content>

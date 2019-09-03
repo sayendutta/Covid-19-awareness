@@ -1,35 +1,31 @@
  
 <ion-content padding >
-  <ion-card>
-    <ion-card-header color="primary"><p>MealKing</p></ion-card-header>
+  <h1>Create Account</h1>
+  <div></div>
+  <br>
       <ion-item>
           <ion-label position="floating">Name</ion-label>
-          <ion-input type="text" [(ngModel)]="data.customer_name"></ion-input>
+          <ion-input type="text" placeholder="Enter your name" [(ngModel)]="data.customer_name"></ion-input>
       </ion-item>
         <ion-item>
             <ion-label position="floating">Phone</ion-label>
-            <ion-input type="tel" [(ngModel)]="data.phone_no"></ion-input>
+            <ion-input type="tel" placeholder="Enter your mobile number" [(ngModel)]="data.phone_no"></ion-input>
         </ion-item>
       <ion-item>
-        <ion-label position="floating">Email Id (Optional)</ion-label>
-        <ion-input type="email" [(ngModel)]="data.email"></ion-input>
+        <ion-label position="floating">Email(Optional)</ion-label>
+        <ion-input type="email" placeholder="Enter your E-mail" [(ngModel)]="data.email"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" [(ngModel)]="data.customer_password"></ion-input>
+      <ion-input type="password" placeholder="Enter a strong password" [(ngModel)]="data.customer_password"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Confirm Password</ion-label>
-    <ion-input type="password" [(ngModel)]="data.confirmpassword"></ion-input>
+    <ion-input type="password" placeholder="Confirm your password" [(ngModel)]="data.confirmpassword"></ion-input>
 </ion-item>
             <br>
-            <br>
-              <ion-button expand="block" (click)=submitReg() [disabled]="data.phone_no==''  ||  data.customer_password=='' || data.customer_name=='' || data.confirmpassword==''">Register here</ion-button>
-  </ion-card>
-  
+              <ion-button expand="block" class="register"  (click)=submitReg() [disabled]="data.phone_no==''  ||  data.customer_password=='' || data.customer_name=='' || data.confirmpassword==''"><p class="reg">Create a new account</p></ion-button>
+ <br>
+ <div></div>
+              <ion-button expand="block" fill="clear" (click)=pushLogin()><p>Log In Instead</p></ion-button>
 </ion-content>
-<ion-footer (click)=pushLogin()>
-  <ion-toolbar>
-    <ion-title style='font-size:14px !important;text-align:center'>Already have an account? Login</ion-title>
-  </ion-toolbar>
-</ion-footer>

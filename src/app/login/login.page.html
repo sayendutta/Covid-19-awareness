@@ -2,29 +2,35 @@
 <ion-content padding>
   <br>
   <br>
+  <ion-icon src="assets/user.svg" color="light"></ion-icon>
   <br>
   <br>
   <br>
   <br>
-  <ion-card>
-    <ion-card-header color="primary"><p>Mealking</p></ion-card-header>
-    <ion-item>
-      <ion-label position="floating">Phone Number</ion-label>
-      <ion-input type="tel" placeholder="Enter Your Phone Number"></ion-input>
+  <h1>Sign In</h1>
+  <div class="line"></div>
+  <br>
+  <br>
+  <br>
+    <ion-item>  
+      
+      <ion-input type="tel" placeholder="Phone Number" [(ngModel)]="data.phone_no"></ion-input>
     </ion-item>
-    
+    <br>
     <ion-item>
-        <ion-label position="floating" color="primary">Password</ion-label>
-        <ion-input type="password" placeholder="Enter Your Password"></ion-input>
+      
+        <ion-input type="password" placeholder="Password" [(ngModel)]="data.customer_password" ></ion-input>
       </ion-item>
+    
+      <ion-button class="btn" expand="block" color="light" fill="clear" routerLink="/forgotpassword"><p class="s">Forgot Password?</p></ion-button>
+      
       <br>
-        <br>
-      <ion-button class="btn" expand="block" color="light" fill="clear" routerLink="/forgotpassword"><p class="s">Forgot Password</p></ion-button>
-      <br>
-      <br>
-          <ion-button class="bt" expand="block" routerLink="/tabs"><p>Login</p></ion-button>   
-  </ion-card>
+          <ion-button class="bt" shape="round" color="warning" fill="clear"  (click)="submitLogin()"><p>Sign In</p></ion-button>   
+          <br>
+          <br>
+          <div class="line"></div>
+          <ion-button class="b" expand="block" fill="clear"  routerLink="/register" routerDirection="forward"><p class="reg">Create Account</p></ion-button>
+          <br>
+          <br>
+          <br>
 </ion-content>
-<ion-footer>
-    <ion-button class="b" expand="block" color="primary" routerLink="/register" routerDirection="forward">Don't have an account? Register</ion-button>
-</ion-footer>

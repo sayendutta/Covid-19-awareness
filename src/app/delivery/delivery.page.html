@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
      
-    <ion-title>Delivery       <ion-button  style='position:absolute;right:10px;top:-12px;font-size:12px' >Confirm</ion-button>
+    <ion-title>Delivery       <ion-button  style='position:absolute;right:10px;top:-12px;font-size:12px' [disabled]="address.length==0 ||  pincode==0 || location.length==0" (click)=confirmDelivery()>Confirm</ion-button>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,7 +11,7 @@
     <ion-card-content>
       <ion-item>
         <ion-label>Select Primary Location</ion-label>
-        <ion-select>
+        <ion-select [(ngModel)]="location">
           <ion-select-option>Kasba</ion-select-option>
           <ion-select-option>Tiljala</ion-select-option>
           <ion-select-option>Ruby</ion-select-option>
@@ -20,11 +20,11 @@
       </ion-item>
       <ion-item>
         <ion-label position="floating">Address</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" [(ngModel)]="address"></ion-input>
       </ion-item>
       <ion-item>
           <ion-label position="floating">Pincode</ion-label>
-          <ion-input type="number"></ion-input>
+          <ion-input type="number" [(ngModel)]="pincode"></ion-input>
         </ion-item>
         <p style="margin-top:20px">If your location isn't showing in the dropdown , then it probably means we are not delivering in that area for now.</p>
     </ion-card-content>
@@ -33,7 +33,7 @@
 
     <ion-card-content>
     <ion-item>
-       Total : &#8377; 
+       Total : &#8377;{{total}}
     </ion-item>
     <ion-item>
       Payment by Cash On Delivery (COD)

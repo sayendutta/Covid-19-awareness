@@ -2,21 +2,22 @@
   <ion-toolbar>
     <ion-title>
       Products 
-      <ion-button  style='position:absolute;right:10px;top:-12px;font-size:12px'>Proceed</ion-button>
+      <ion-button  style='position:absolute;right:10px;top:-12px;font-size:12px' [disabled]="total==0" (click)=goToDelivery()>Proceed</ion-button>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+<ng-container *ngFor="let data of list">
   <ion-card>
     <ion-card-content>
       <ion-item>
-        <ion-label>product </ion-label>
-        <p> &#8377; price</p>
+        <ion-label>{{data.product}} </ion-label>
+        <p> &#8377; {{data.price}}</p>
       </ion-item>
         <ion-item>
             <ion-label>Quantity</ion-label>
-            <ion-select>
+            <ion-select [(ngModel)]=data.id (ionChange)="display(data.id,data.product,data.price)">
                 <ion-select-option>
                     0
                   </ion-select-option>
@@ -49,4 +50,5 @@
       
     </ion-card-content>
   </ion-card>
+</ng-container>
 </ion-content>

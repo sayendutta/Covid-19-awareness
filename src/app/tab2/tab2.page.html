@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Transaction History     <ion-button  style='position:absolute;right:10px;top:-12px;font-size:12px'>Refresh Data</ion-button>
+      Transaction History     <ion-button  style='position:absolute;right:10px;top:-12px;font-size:12px'(click)=refresh()>Refresh Data</ion-button>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -16,19 +16,19 @@
               <ion-col>   Total</ion-col>
               <ion-col>   Payment</ion-col>
             </ion-row>
-      <ng-container>
+      <ng-container *ngFor="let data of data">
         
-   <ion-row>
+   <ion-row (click)="detailPage(data.id)">
 
-         <ion-col>    <ion-item>   </ion-item></ion-col>    
-         <ion-col>   <ion-item>&#8377; </ion-item></ion-col>    
-         <ion-col>   <ion-item>  </ion-item></ion-col>
+         <ion-col>    <ion-item>  {{data.date}}  </ion-item></ion-col>    
+         <ion-col>   <ion-item>&#8377;{{data.total}}  </ion-item></ion-col>    
+         <ion-col>   <ion-item>{{data.payment}}  </ion-item></ion-col>
        </ion-row>
     
       </ng-container>
     
     </ion-grid>
-    <div >
+    <div *ngIf="!data">
         <div class="ion-padding custom-skeleton">
           <ion-grid>
             <ion-row >

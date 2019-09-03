@@ -3,15 +3,21 @@ ion-item{
         --background: none;
 }
 ion-label{
-    color: #000000 !important;
+    color: #ffffff !important;
+    text-transform: uppercase;
+}
+ion-input{
+    --placeholder-color: white;
+    color: white !important;
 }
 p{
     color: #ffffff !important;
     text-align: center;
     font-size: 15px;
+    text-transform: capitalize;
 }
-ion-card{
-    --background: rgba(255,255,255,0.7);
+.register{
+    --background: #1fa51f;
 }
 ion-list{
     --background: none;
@@ -20,11 +26,20 @@ ion-radio-group{
     --background: none;
 }
 ion-content{
-    --background:  #fff url('https://barbtaub.files.wordpress.com/2015/01/img_0006.jpg') no-repeat center center / cover;
+    --background: linear-gradient(to bottom left,green,#07b1f5);
 }
 .ba{
     height: 50px !important;
 }
+h1{
+    margin-left: 20%;
+    color: white;
+}
+div{
+    width: 100%;
+    border: solid white 1px;
+}
+
 ion-footer{
     height: 50px !important;
 }

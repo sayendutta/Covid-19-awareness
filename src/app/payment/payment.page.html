@@ -7,20 +7,21 @@
 <ion-content>
 <ion-card>
   <ion-card-content>
+    <img src='https://image.flaticon.com/icons/svg/660/660536.svg' >
     <p style='margin-top:10px;'>Your order has been successfully placed. We will call you in the next 30 minutes to give the exact time of delivery.</p>
  <ion-item>
     <ion-grid style='text-align:center;font-size:14px'>
     <ion-row>
       <ion-col>Total</ion-col>
-      <ion-col>&#8377; total</ion-col>
+      <ion-col>&#8377; {{total}}</ion-col>
     </ion-row>
     <ion-row>
       <ion-col>Address</ion-col>
-      <ion-col>address</ion-col>
+      <ion-col>{{address}}</ion-col>
     </ion-row>
     <ion-row>
       <ion-col>Pincode</ion-col>
-      <ion-col>pincode</ion-col>
+      <ion-col>{{pincode}}</ion-col>
     </ion-row>
     <ion-row>
         <ion-col>Payment</ion-col>
@@ -32,9 +33,9 @@
 <p style='font-size:13px'>Orders placed in the morning will be delivered around 5pm-9pm and those ordered during the night from 6am-11am</p>
 
 
-<p style='font-size:13px;font-style:italic'>Note:Orders once placed cannot be cancelled. For support , call : +971980588507
+<p style='font-size:13px;font-style:italic'>Note:Orders once placed cannot be cancelled. For support , call : +919007688507
 </p>
-<ion-button >Go to Home</ion-button>
+<ion-button (click)=goToOrder()>Go to Home</ion-button>
   </ion-card-content>
 </ion-card>
 </ion-content>

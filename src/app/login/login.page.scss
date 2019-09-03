@@ -4,38 +4,78 @@ page-home{
         height: 100px;
     }
 }
+
+ion-input{
+    --placeholder-color: white;
+    margin-left: 5px;
+   
+}
+ion-item{
+    margin-left: 20px;
+    width:250px;
+    border: 1px solid white;
+    border-radius: 30px;
+}
 ion-content{
-    --background: #fff url('https://media.npr.org/assets/img/2014/06/15/51140413-7b24e23c1293d6cb8f4459c236b132d17c041e0e-s1200.jpg') no-repeat center center / cover;
+    --background: linear-gradient(to bottom left,green,#07b1f5);
+}
+ion-icon{
+    height: 65px;
+    width: 65px;
+    margin-left: 35%;
+    margin-top: -20px;
+    position: absolute;
 }
 ion-card{
     --background:rgba(255,255,255,0.7);
 }
-ion-label{
-    color: #000000 !important;
-}
+
     ion-item{
         --background: none;
     }
+    
     p{
         color: #ffffff !important;
         text-align: center;
+        text-transform: capitalize;
     }
     .icon{
         margin-left: 80% !important;
         position: absolute;
+    }
+    h1{
+        color: #ffffff !important;
+        margin-left: 35%;
+        margin-top: -20px;
+    } 
+    .reg{
+        color: #ffffff !important;
     }
     .call{
         margin-left: 0% !important;
     }
     .btn{
         width: 200px !important;
+        margin-left: 30%;
     }
+   
+    div{
+        width: 100%;
+        border: solid white 1px;
+    }
+    
     .bt{
-        color: #4c00ff !important;
+       
+        margin-left: 15%;
+        height: 50px;
+        width: 200px;
+        border: 5px solid white;
+        border-radius: 30px;
       
     }
     .s{
-        color: #4c00ff !important;
+        color: #ffffff !important;
+        text-transform: capitalize;
     }
     ion-footer{
         height: 50px !important;
@@ -45,4 +85,5 @@ ion-label{
     }
     .b{
         height: 50px !important;
+        color: #00ff7f !important;
     }
