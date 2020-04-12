@@ -1,24 +1,19 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Profile
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-  <ion-card>
-    <ion-card-content>
-      <ion-item>
-        <ion-label>Name</ion-label>
-        <p>{{name}}</p>
-      </ion-item>
-      <ion-item>
-        <ion-label>Phone</ion-label>
-        <p>{{phone}}</p>
-      </ion-item>
-      <ion-button style='float:right' (click)=logout()> Log Out</ion-button>
-    </ion-card-content>
-  </ion-card>
+    <ion-icon name="arrow-back" class="back" routerLink="/home"></ion-icon>
+      <ion-title>About Me</ion-title>
+    </ion-header>
+<ion-content padding>
+     <img src="assets/sayen.jpg" style="width: 150px;height: 150px;border-radius: 50%;margin-left: 80px;">
+     <br>
+     <h1 style="margin-left: 80px;">Sayen Dutta</h1>
+     <br>
+     <h4>Android Developer | Ionic Developer</h4>
+     <br>
+     <div style="width: 98%;border: 0.5px solid lightgray;"></div>
+     <br>
+     <p>My Linked Profile: <a href="https://www.linkedin.com/in/sayen-dutta-b24243176/">https://www.linkedin.com/in/sayen-dutta-b24243176/</a></p>
+     <br>
+     <p>My Facebook Profile: <a href="https://www.facebook.com/sayen.dutta.5">https://www.facebook.com/sayen.dutta.5</a></p>
+     <br>
+     <p>My Twitter Profile: <a href="https://twitter.com/dutta_sayen">https://twitter.com/dutta_sayen</a></p>
 </ion-content>
