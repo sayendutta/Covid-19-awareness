@@ -4,13 +4,14 @@
 </ion-header>
 <ion-content padding>
   <img src="assets/infection.jpg" style="width: 350px;height: 200px;">
-  <ion-item>
+  <ion-item >
       
       <ion-input type="text" placeholder="Enter a country name" id="search" [(ngModel)]="search"></ion-input>
-      <ion-icon name="search" (click)="searchByCountry()"></ion-icon>
+      <ion-icon name="search"  ></ion-icon>
   </ion-item>
-
+  <ion-button shape="round"  style="margin-left: 120px;" (click)="searchByCountry()"><p style="text-transform: capitalize;">Search</p></ion-button>
   <br>
+  <p style="margin-left: 50px;color:blue !important;">Updated on: {{data.Date}}</p>
   <ion-card>
       <h4>Country Name: {{search}}</h4>
       <br>
