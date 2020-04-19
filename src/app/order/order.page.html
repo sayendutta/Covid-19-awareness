@@ -13,10 +13,20 @@
   <br>
   <p style="margin-left: 50px;color:blue !important;">Updated on: {{data.Date}}</p>
   <ion-card>
-      <h4>Country Name: {{search}}</h4>
-      <br>
-      <h5>Infected: {{data.TotalConfirmed}} </h5>
-      <h5>Recovered: {{data.TotalRecovered}} </h5>
-      <h5>Deaths: {{data.TotalDeaths}}</h5>
+      
+      <h5>Infected</h5>
+      
+      <h5>{{data.TotalConfirmed}}</h5>
+      
+  </ion-card>
+  <ion-card style="margin-left:120px;margin-top:-110px">
+    <h5>Recovered</h5>
+    
+    <h5>{{data.TotalRecovered}}</h5>
+  </ion-card>
+  <ion-card style="margin-left:230px;margin-top:-110px">
+    <h5>Deaths </h5>
+    
+    <h5>{{data.TotalDeaths}}</h5>
   </ion-card>
 </ion-content>
